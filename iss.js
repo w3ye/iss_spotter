@@ -56,7 +56,7 @@ const nextISSTimeForMyLocation = (callback) => {
 
       fetchISSFlyOverTimes(coords, (err, passTime) => {
         if (err) return callback(err);
-        return callback(passTime);
+        return callback(null, passTime);
       });
     });
   });
